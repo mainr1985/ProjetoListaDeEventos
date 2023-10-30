@@ -1,34 +1,23 @@
 package com.eventoapp.models;
 
+import java.util.UUID;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
+import lombok.Data;
+
+@Data
+@Entity (name="tb_evento")
 public class Evento {
 	String nome;
 	String local;
 	String data;
-	String horario;
-	public String getNome() {
-		return nome;
-	}
-	public void setNome(String nome) {
-		this.nome = nome;
-	}
-	public String getLocal() {
-		return local;
-	}
-	public void setLocal(String local) {
-		this.local = local;
-	}
-	public String getData() {
-		return data;
-	}
-	public void setData(String data) {
-		this.data = data;
-	}
-	public String getHorario() {
-		return horario;
-	}
-	public void setHorario(String horario) {
-		this.horario = horario;
-	}
-	
-	
+	String horario;	
+
+	@Id
+	@GeneratedValue(generator="UUID")
+	private UUID id;
+
+
 }

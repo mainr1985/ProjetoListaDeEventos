@@ -1,5 +1,22 @@
+<!DOCTYPE HTML>
 <html>
+	<head>
+		<title>Eventos APP</title>
+	</head>
 <body>
-	<h1>Hello World Spring Boot!</h1>
+	<h1>Cadastro de Eventos:</h1>
+	<!--autocomplete off desliga as sugestões de último digitado no campo-->
+	<form method = "post" autocomplete="off">
+		<label for = "idnome">Nome</label>
+		<input type="text" value = "" name="nome" id="idnome"/>
+		<label for = "idlocal"></label>
+		<input type="text" value = "" name="local" id="idlocal"/>
+		<label for="id_data"></label>
+		<input type="date" value = "" name="data" id="id_data">
+		<label for="id_horario"></label>
+		<input type="time" value = "" name="horario" id="id_horario">
+	
+		<button type="submit">Salvar</button>
+	</form>
 </body>
 </html>
